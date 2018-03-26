@@ -1,0 +1,34 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product:
+  version:
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Working Title
+      url: /working_title.html
+      output: web, pdf
+      type: homepage
+
+    - title: Working Title Chrome
+      url: /enforcing_g-suite_user_login_on_google_chrome_for_macos.html
+      output: web, pdf
+      type: homepage
