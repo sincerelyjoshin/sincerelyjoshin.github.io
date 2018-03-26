@@ -6,6 +6,6 @@ allowed-tags:
   - jamf
   - munki
   - google
-  - google_chrome
+  - chrome
   - windows
   - chef

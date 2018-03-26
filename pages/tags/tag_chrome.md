@@ -1,6 +1,6 @@
 ---
-title: "Google Chrome"
-tagName: google_chrome
+title: "Chrome"
+tagName: chrome
 search: exclude
 permalink: tag_chrome.html
 sidebar: blog_sidebar
