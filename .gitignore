@@ -1,2 +1,4 @@
 .DS_Store
 _site/
+pages/documentation/doc_template.md
+pages/tags/tag_template.md

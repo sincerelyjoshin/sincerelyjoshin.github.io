@@ -19,16 +19,11 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Overview
+  - title: Documentation
     output: web, pdf
     folderitems:
 
-    - title: Working Title
-      url: /working_title.html
-      output: web, pdf
-      type: homepage
-
-    - title: Working Title Chrome
-      url: /enforcing_g-suite_user_login_on_google_chrome_for_macos.html
+    - title: Enforce G-Suite user login for macOS
+      url: /enforce_g-suite_user_login_for_macos.html
       output: web, pdf
       type: homepage
