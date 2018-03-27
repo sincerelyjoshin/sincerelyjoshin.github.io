@@ -12,7 +12,7 @@ As of Google Chrome version 64 Windows has had access to the [```ForceBrowserSig
 
 ##  OBJECTIVE
 
-Block all ```http://``` and ```https://``` traffic will besides the [Google accounts sign in page](https://accounts.google.com). Once a user is signed in to Google Chrome with a managed account within a whitelisted domain traffic will be restored and users will be subject to all additional policies configured in the Google Admin Console.  
+Force users to sign into Google Chrome by blocking all ```http://``` and ```https://``` traffic besides the [Google accounts sign in page](https://accounts.google.com). Once a user is signed in to Google Chrome with a managed account within a whitelisted domain traffic will be restored and users will be subject to all additional policies configured in the Google Admin Console.  
 
 **THIS IS ACCOMPLISHED VIA 3 COMPONENTS:**
   1. **Launch Agent** - blacklists all ```http://``` and ```https://``` traffic (Policy Level - Recommended)
