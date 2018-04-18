@@ -8,7 +8,13 @@ permalink: enforce_g-suite_user_login_for_macos.html
 folder: documentation
 last_updated:
 ---
-As of Google Chrome version 64 Windows has had access to the [```ForceBrowserSignin```](https://www.chromium.org/administrators/policy-list-3#ForceBrowserSignin) management key requiring users to sign in to Google Chrome with their profile before using the browser. When paired with the [```RestrictSigninToPattern```](https://www.chromium.org/administrators/policy-list-3#RestrictSigninToPattern) key users are not only forced to sign in to their browser but are also restricted to whitelisted domains. Support for ```ForceBrowserSignin```will supposedly be available for macOS in version 66, but until then we all still have a job to do.   
+{% include warning.html content="
+
+With the release of Google Chrome 66, I would no longer recommend using this method to force users to sign into Google Chrome. Deploy the ```ForceBrowserSignin``` key via configuration profile instead.
+
+" %}  
+
+As of Google Chrome version 64 Windows has had access to the [```ForceBrowserSignin```](https://www.chromium.org/administrators/policy-list-3#ForceBrowserSignin) management key requiring users to sign in to Google Chrome with their profile before using the browser. When paired with the [```RestrictSigninToPattern```](https://www.chromium.org/administrators/policy-list-3#RestrictSigninToPattern) key users are not only forced to sign in to their browser but are also restricted to whitelisted domains. Support for ```ForceBrowserSignin``` will supposedly be available for macOS in version 66, but until then we all still have a job to do.   
 
 ##  OBJECTIVE
 
