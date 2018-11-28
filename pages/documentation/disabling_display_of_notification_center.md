@@ -9,13 +9,13 @@ folder: documentation
 last_updated:
 ---
 
-# Disabling Display of Notification Center
-
 The 'swipe left from the right edge with two fingers' Notification Center trackpad gesture can be tracked down to a single key on two seperate plist's. One for the integrated multitouch trackpad, com.apple.AppleMultitouchTrackpad.plist and another for the external bluetooth trackpad, com.apple.driver.AppleBluetoothMultitouch.trackpad.plist.
 
 > Obliously not relevant for Mac desktop products, such as iMac or Mac Mini, unless they interact with a Magic Trackpad
 
-## com.apple.AppleMultitouchTrackpad.plist and associated key(s)
+## Targeted Plists and Associated Key(s)
+
+### com.apple.AppleMultitouchTrackpad.plist
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -29,7 +29,7 @@ The 'swipe left from the right edge with two fingers' Notification Center trackp
 </plist>
 ```
 
-## com.apple.driver.AppleBluetoothMultitouch.trackpad.plist and associated key(s)
+### com.apple.driver.AppleBluetoothMultitouch.trackpad.plist
 
 
 ```
@@ -107,11 +107,9 @@ To exclude the Trackpad System Preference pane from System Preferences, exclude 
       <string>com.apple.preference.mouse</string>
       <string>com.apple.preference.printfax</string>
       <string>com.apple.preference.sound</string>
-      <!-- <string>com.apple.preference.trackpad</string> -->
-      <string>com.wacom.PenTabletSettingsPrefPane</string>
-      <string>com.wacom.ProfessionalControlPanel</string>
+      <!-- <string>com.apple.preference.trackpad</string> comment out to disable Trackpad preference pane -->
     </array>
-    <key>HiddenPreferencePanes</key><!-- -->
+    <key>HiddenPreferencePanes</key><!-- leave an empty array -->
     <array/>
   </dict>
 </plist>
