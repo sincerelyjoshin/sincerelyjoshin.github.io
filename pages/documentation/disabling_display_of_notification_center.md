@@ -58,7 +58,7 @@ Obviously not relevant for Mac desktop products, such as iMac or Mac Mini, unles
 
 {% include callout.html content="
 Desired changes require user to log out and back in again
-"type="info" %}
+"type="primary" %}
 
 ## Disabling with Python Script
 
@@ -89,7 +89,7 @@ exit()
 ```
 {% include callout.html content="
 Desired changes require user to log out and back in again
-"type="info" %}
+"type="primary" %}
 
 ## Disable Trackpad Preference Pane from System Preferences
 
