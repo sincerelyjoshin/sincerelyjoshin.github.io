@@ -9,15 +9,19 @@ folder: documentation
 last_updated:
 ---
 
-The 'swipe left from the right edge with two fingers' Notification Center trackpad gesture can be tracked down to a single key on two seperate plist's. One for the integrated multitouch trackpad, com.apple.AppleMultitouchTrackpad.plist and another for the external bluetooth trackpad, com.apple.driver.AppleBluetoothMultitouch.trackpad.plist.
+The 'swipe left from the right edge with two fingers' Notification Center trackpad gesture can be tracked down to a single key on two separate plist's. One for the integrated multitouch trackpad, `com.apple.AppleMultitouchTrackpad.plist` and another for an external bluetooth multitouch trackpad, `com.apple.driver.AppleBluetoothMultitouch.trackpad.plist`.
 
-> Obliously not relevant for Mac desktop products, such as iMac or Mac Mini, unless they interact with a Magic Trackpad
+{% include tip.html content="
+
+Obviously not relevant for Mac desktop products, such as iMac or Mac Mini, unless they interact with an input device such as Magic Trackpad
+
+" %}
 
 ## Targeted Plists and Associated Key(s)
 
 ### com.apple.AppleMultitouchTrackpad.plist
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -32,7 +36,7 @@ The 'swipe left from the right edge with two fingers' Notification Center trackp
 ### com.apple.driver.AppleBluetoothMultitouch.trackpad.plist
 
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -46,15 +50,19 @@ The 'swipe left from the right edge with two fingers' Notification Center trackp
 
 ## Disabling with Terminal
 
-`/usr/bin/defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0`
+```sh
+/usr/bin/defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
+```
 
-`/usr/bin/defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0`
+```sh
+/usr/bin/defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
+```
 
 > Note: Desired changes require user to log out and back in again
 
 ## Disabling with Python Script
 
-```
+```py
 #!/usr/bin/python
 
 import os
@@ -82,13 +90,11 @@ exit()
 
 > Note: Desired changes require user to log out and back in again
 
-## Ensure Trackpad Gesture Remains Disabled
-
-### Disable Trackpad Preference Pane from System Preferences
+## Disable Trackpad Preference Pane from System Preferences
 
 To exclude the Trackpad System Preference pane from System Preferences, exclude `com.apple.preference.trackpad` from the EnabledPreferencePanes array in a `com.apple.systempreferences` configuration profile.
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
