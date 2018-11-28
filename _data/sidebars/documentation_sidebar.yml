@@ -27,3 +27,12 @@ entries:
       url: /enforce_g-suite_user_login_for_macos.html
       output: web, pdf
       type: homepage
+
+  - title: Configuring macOS for State Testing
+    output: web, pdf
+    folderitems:
+
+    - title: Disabling Display of Notification Center
+      url: /disabling_display_of_notification_center.html
+      output: web, pdf
+      type: homepage
