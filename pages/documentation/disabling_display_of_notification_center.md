@@ -12,9 +12,7 @@ last_updated:
 The 'swipe left from the right edge with two fingers' Notification Center trackpad gesture can be tracked down to a single key on two separate plist's. One for the integrated multitouch trackpad, `com.apple.AppleMultitouchTrackpad.plist` and another for an external bluetooth multitouch trackpad, `com.apple.driver.AppleBluetoothMultitouch.trackpad.plist`.
 
 {% include note.html content="
-
-Obviously not relevant for Mac desktop products, such as iMac or Mac Mini, unless they interact with an input device such as Magic Trackpad
-
+  Obviously not relevant for Mac desktop products, such as iMac or Mac Mini, unless they interact with Magic Trackpad
 " %}
 
 ## Targeted Plists and Associated Key(s)
@@ -58,13 +56,9 @@ Obviously not relevant for Mac desktop products, such as iMac or Mac Mini, unles
 /usr/bin/defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
 ```
 
-{% include callout.html content=
-"Desired changes require user to log out and back in again"
-type="primary" %}
-
-{% include callout.html content=
-"Desired changes require user to log out and back in again"
-type="primary" %}
+{% include callout.html content="
+  Desired changes require user to log out and back in again
+"type="info" %}
 
 ## Disabling with Python Script
 
@@ -93,9 +87,9 @@ CFPreferencesSetAppValue("TrackpadTwoFingerFromRightEdgeSwipeGesture", 0, "com.a
 
 exit()
 ```
-{% include callout.html content=
-"Desired changes require user to log out and back in again"
-type="primary" %}
+{% include callout.html content="
+  Desired changes require user to log out and back in again
+"type="info" %}
 
 ## Disable Trackpad Preference Pane from System Preferences
 
