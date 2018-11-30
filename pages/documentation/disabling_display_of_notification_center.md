@@ -107,7 +107,7 @@ It is also within best interest to include the key `HiddenPreferencePanes` as an
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>EnabledPreferencePanes</key><!-- -->
+    <key>EnabledPreferencePanes</key>
     <array>
       <string>com.apple.Localization</string>
       <strint>com.apple.preference.datetime</string>
@@ -129,7 +129,7 @@ It is also within best interest to include the key `HiddenPreferencePanes` as an
       <string>com.apple.preference.speech</string>
       <string>com.apple.preference.spotlight</string>
       <string>com.apple.preference.startupdisk</string>
-      <!-- <string>com.apple.preference.trackpad</string> comment out to disable Trackpad preference pane -->
+      <!-- <string>com.apple.preference.trackpad</string> comment to disable Trackpad preference pane -->
       <string>com.apple.preference.universalaccess</string>
       <string>com.apple.preferences.appstore</string>
       <string>com.apple.preferences.Bluetooth</string>
@@ -145,7 +145,7 @@ It is also within best interest to include the key `HiddenPreferencePanes` as an
       <string>com.apple.prefpanel.fibrechannel</string>
       <string>com.apple.prefs.backup</string>
     </array>
-    <key>HiddenPreferencePanes</key><!-- leave an empty array -->
+    <key>HiddenPreferencePanes</key>
     <array/>
   </dict>
 </plist>

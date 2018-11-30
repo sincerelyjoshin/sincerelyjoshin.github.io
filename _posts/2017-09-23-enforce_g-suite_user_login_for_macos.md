@@ -1,11 +1,11 @@
 ---
-title: "Enforce G-Suite user login for macOS"
+title: "Enforce G-Suite User Login For macOS"
 summary: Workflow requiring macOS clients to sign in to Google Chrome with a managed account within a whitelisted domain to enforce policies set at Google Admin Console.
-tags: [macos, google, chrome]
-keywords: [google, chrome, macos]
-sidebar: documentation_sidebar
+tags: [macos, chrome]
+keywords: [chrome, macos]
+sidebar: blog_sidebar
 permalink: enforce_g-suite_user_login_for_macos.html
-folder: documentation
+folder: blog
 last_updated:
 ---
 {% include warning.html content="
@@ -16,7 +16,7 @@ With the release of Google Chrome 66, I would no longer recommend using this met
 
 As of Google Chrome version 64 Windows has had access to the [```ForceBrowserSignin```](https://www.chromium.org/administrators/policy-list-3#ForceBrowserSignin) management key requiring users to sign in to Google Chrome with their profile before using the browser. When paired with the [```RestrictSigninToPattern```](https://www.chromium.org/administrators/policy-list-3#RestrictSigninToPattern) key users are not only forced to sign in to their browser but are also restricted to whitelisted domains. Support for ```ForceBrowserSignin``` will supposedly be available for macOS in version 66, but until then we all still have a job to do.   
 
-##  OBJECTIVE
+##  Objective
 
 Force users to sign into Google Chrome by blocking all ```http://``` and ```https://``` traffic besides the [Google accounts sign in page](https://accounts.google.com). Once a user is signed in to Google Chrome with a managed account within a whitelisted domain traffic will be restored and users will be subject to all additional policies configured in the Google Admin Console.  
 
@@ -33,9 +33,9 @@ Basic knowledge of Google Chrome policy is recommended to understand how the 3 c
 
 " %}
 
-## COMPONENTS
+## Components
 
-### LAUNCH AGENT
+### Launch Agent
 
 The launch agent will run the following command on user login:
 ```sh
@@ -66,7 +66,7 @@ This will block all ```http://``` and ```https://``` traffic when using Google C
 </plist>
 ```
 
-### CONFIGURATION PROFILE
+### Configuration Profile
 
 The Configuration Profile for preference domain com.google.Chrome will whitelist the URL accounts.google.com so that users can access the Google login page. The ``RestrictSigninToPattern`` key will also be managed here to limit which domains can login.  
 
@@ -85,7 +85,7 @@ The Configuration Profile for preference domain com.google.Chrome will whitelist
 </plist>
 ```
 
-### CHROME MANAGEMENT - GOOGLE ADMIN CONSOLE
+### Chrome Management - Google Admin Console
 
 {% include warning.html content="
 

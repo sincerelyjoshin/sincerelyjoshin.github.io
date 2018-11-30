@@ -19,15 +19,6 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Documentation
-    output: web, pdf
-    folderitems:
-
-    - title: Enforce G-Suite user login for macOS
-      url: /enforce_g-suite_user_login_for_macos.html
-      output: web, pdf
-      type: homepage
-
   - title: Configuring macOS for State Testing
     output: web, pdf
     folderitems:
