@@ -23,18 +23,14 @@ entries:
     output: web
     folderitems:
 
-    - title: macOS
+    - title: macos
       url: /tag_macos.html
       output: web
 
-    - title: Munki
+    - title: munki
       url: /tag_munki.html
       output: web
 
-    - title: Google
-      url: /tag_google.html
-      output: web
-
-    - title: Chrome
+    - title: chrome
       url: /tag_chrome.html
       output: web

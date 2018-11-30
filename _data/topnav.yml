@@ -15,4 +15,4 @@ topnav_dropdowns:
         - title: Blog
           url: /index.html
         - title: Documentation
-          url: /enforce_g-suite_user_login_for_macos.html
+          url: /disabling_display_of_notification_center.html
