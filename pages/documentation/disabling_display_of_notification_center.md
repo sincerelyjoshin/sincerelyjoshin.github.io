@@ -9,7 +9,7 @@ folder: documentation
 last_updated:
 ---
 
-The *swipe left from the right edge with two fingers* trackpad gesture used to access Notification Center can be tracked down to a single key on two separate property lists; one for the integrated multi-touch trackpad and another for an external bluetooth multi-touch trackpad.
+The _swipe left from the right edge with two fingers_ trackpad gesture used to access Notification Center can be tracked down to a single key on two separate property lists; one for the integrated multi-touch trackpad and another for an external bluetooth multi-touch trackpad.
 
 {% include image.html file="TrackpadTwoFingerFromRightEdgeSwipeGesture-01.png" %}
 
@@ -49,7 +49,7 @@ The `TrackpadTwoFingerFromRightEdgeSwipeGesture` key in the `com.apple.driver.Ap
 </plist>
 ```
 
-## Disabling Locally with Terminal
+## Disabling Locally With Terminal
 
 Running the following commands locally in Terminal, while logged into the targeted user account will disable the Notification Center trackpad gesture upon next login.
 
@@ -65,7 +65,7 @@ Running the following commands locally in Terminal, while logged into the target
 Desired changes will not take effect until next user session
 " %}
 
-## Disabling Remotely with Script
+## Disabling Remotely With Script
 
 If you have the ability to deploy a script to your clients remotely, you will want to take advantage of the following script. It calls the Python Objective-C bridge, [PyObjC](https://pythonhosted.org/pyobjc/), to set the ```TrackpadTwoFingerFromRightEdgeSwipeGesture``` key to the integer value 0 in both preference domains. The script will run the commands as whomever occupies the current user session regardless of whether your management system executes as root. Just as the local method using terminal, this will disable the Notification Center trackpad gesture upon next login.
 ```py
@@ -97,7 +97,7 @@ exit()
 Desired changes will not take effect until next user session
 " %}
 
-## Disable Trackpad Preference Pane from System Preferences
+## Disable Trackpad Preference Pane From System Preferences
 
 To ensure that users do not tamper with the Trackpad Gesture settings you will want to disable the Trackpad preference pane in System Preferences by deploying a configuration profile. In order to disable the Trackpad System Preference pane from System Preferences, exclude `com.apple.preference.trackpad` from the `EnabledPreferencePanes` array in a configuration profile targeting the `com.apple.systempreferences` preference domain.  
 It is also within best interest to include the key `HiddenPreferencePanes` as an empty array to prevent a bug that would render your managed preference pane payload useless.
