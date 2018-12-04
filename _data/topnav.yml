@@ -15,4 +15,4 @@ topnav_dropdowns:
         - title: Blog
           url: /index.html
         - title: Documentation
-          url: /disabling_display_of_notification_center.html
+          url: /disabling_look-up_gesture.html
