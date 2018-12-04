@@ -8,7 +8,7 @@ permalink: disabling_look-up_gesture.html
 last_updated:
 ---
 
-Definition lookup for macOS is identified within the _Restrictions_ payload of Apple's MDM specification. Disabling definition lookup can be accomplished by assigning the `AllowDefinitionLookup` key the boolean value `false` in a configuration profile assigned the `com.apple.applicationaccess`, or _Restrictions_, payload type.
+Definition lookup for macOS is identified within the _Restrictions_ payload of [Apple's MDM specification](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf). Disabling definition lookup can be accomplished by assigning the `AllowDefinitionLookup` key the boolean value `false` in a configuration profile assigned the `com.apple.applicationaccess`, or _Restrictions_, payload type.
 
 {% include note.html content="
 A configuration profile is an XML file that allows you to distribute configuration information.
