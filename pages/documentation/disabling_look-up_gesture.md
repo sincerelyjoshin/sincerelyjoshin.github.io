@@ -75,7 +75,7 @@ Configuration profiles can be deployed remotely without MDM by first bundling th
 
 This command will generate a distributable package containing the the **DisableLookUp.mobileconfig** and a _postinstall_ script to trigger installation. The package will be located in the current working directory and will be named **DisableLookUp-1.0.pkg**. You now have a distributable package that can be deployed remotely using the tool of your choice.
 
-## Disable Profiles Preference Pane from System Preferences
+## Disable _Profiles_ Preference Pane from _System Preferences_
 
 To ensure that users do not tamper with configuration profiles installed on the system you will want to disable the _Profiles_ preference pane in _System Preferences_ by deploying a configuration profile. In order to disable the _Profiles_ preference pane from _System Preferences_, exclude `com.apple.preferences.configurationprofiles` from the `EnabledPreferencePanes` array in a configuration profile assigned the `com.apple.systempreferences` payload type.  
 It is also within best interest to include the `HiddenPreferencePanes` key as an empty array to prevent a bug that would render your managed preference pane payload useless.

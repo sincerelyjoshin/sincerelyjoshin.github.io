@@ -8,7 +8,7 @@ permalink: disabling_display_of_notification_center.html
 last_updated:
 ---
 
-The _swipe left from the right edge with two fingers_ trackpad gesture used to access Notification Center can be tracked down to a single key on two separate property lists; one for the integrated multi-touch trackpad and another for an external bluetooth multi-touch trackpad.
+The _swipe left from the right edge with two fingers_ trackpad gesture used to access _Notification Center_ can be tracked down to a single key on two separate property lists; one for the integrated multi-touch trackpad and another for an external bluetooth multi-touch trackpad.
 
 {% include image.html file="TrackpadTwoFingerFromRightEdgeSwipeGesture-01.png" %}
 
@@ -20,7 +20,6 @@ The following will not pertain to Mac desktop products, such as iMac or Mac Mini
 
 The `TrackpadTwoFingerFromRightEdgeSwipeGesture` key in the `com.apple.AppleMultitouchTrackpad` preference domain controls the setting for the _Notification Center_ gesture of the internal, built-in trackpad. Setting the key to the integer value `0` has nearly the same effect as unselecting the check box in Trackpad preference pane in _System Preferences_.
 
-**com.apple.AppleMultitouchTrackpad.plist**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -36,7 +35,6 @@ The `TrackpadTwoFingerFromRightEdgeSwipeGesture` key in the `com.apple.AppleMult
 
 The `TrackpadTwoFingerFromRightEdgeSwipeGesture` key in the `com.apple.driver.AppleBluetoothMultitouch.trackpad` preference domain controls the setting for the _Notification Center_ gesture of an external bluetooth trackpad. Setting the key to the integer value `0` has nearly the same effect as unselecting the check box in Trackpad preference pane in _System Preferences_.
 
-**com.apple.driver.AppleBluetoothMultitouch.trackpad.plist**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -48,7 +46,7 @@ The `TrackpadTwoFingerFromRightEdgeSwipeGesture` key in the `com.apple.driver.Ap
 </plist>
 ```
 
-## Disabling Locally with Terminal
+## Disable Locally With _Terminal_
 
 Running the following commands locally in _Terminal_, while logged into the targeted user account will disable the _Notification Center_ trackpad gesture upon next login.
 
@@ -64,7 +62,7 @@ Running the following commands locally in _Terminal_, while logged into the targ
 Desired changes will not take effect until next user session
 " %}
 
-## Disabling Remotely with Script
+## Disable Remotely With Script
 
 If you have the ability to deploy a script to your clients remotely, you will want to take advantage of the following script. It calls the Python Objective-C bridge, [_PyObjC_](https://pythonhosted.org/pyobjc/), to set the ```TrackpadTwoFingerFromRightEdgeSwipeGesture``` key to the integer value `0` in both preference domains. The script will run the commands as whomever occupies the current user session regardless of whether your management system executes as _Root_. Just as the local method using _Terminal_, this will disable the _Notification Center_ trackpad gesture upon next login.
 ```py
@@ -96,7 +94,7 @@ exit()
 Desired changes will not take effect until next user session
 " %}
 
-## Disable Trackpad Preference Pane from System Preferences
+## Disable _Trackpad_ Preference Pane from _System Preferences_
 
 To ensure that users do not tamper with the trackpad gesture settings you will want to disable the _Trackpad_ preference pane in _System Preferences_ by deploying a configuration profile. In order to disable the _Trackpad_ preference pane from _System Preferences_, exclude `com.apple.preference.trackpad` from the `EnabledPreferencePanes` array in a configuration profile assigned the `com.apple.systempreferences` payload type.  
 It is also within best interest to include the `HiddenPreferencePanes` key as an empty array to prevent a bug that would render your managed preference pane payload useless.
