@@ -1,6 +1,6 @@
 ---
 title: "Disabling Display of Notification Center"
-summary: The trackpad gesture used to access _Notification Center_ can be disabled locally by a set of terminal commands or remotely by a script.
+summary: The trackpad gesture used to access Notification Center can be disabled locally by a set of terminal commands or remotely by a script.
 tags: [macos]
 keywords: [macos]
 sidebar: documentation_sidebar
