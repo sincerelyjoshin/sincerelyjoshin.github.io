@@ -9,7 +9,7 @@ folder: documentation
 last_updated:
 ---
 
-The _swipe left from the right edge with two fingers_ trackpad gesture used to access _Notification Center_ can be tracked down to a single key on two separate property lists; one for the integrated multi-touch trackpad and another for an external bluetooth multi-touch trackpad.
+The _swipe left from the right edge with two fingers_ trackpad gesture used to access Notification Center can be tracked down to a single key on two separate property lists; one for the integrated multi-touch trackpad and another for an external bluetooth multi-touch trackpad.
 
 {% include image.html file="TrackpadTwoFingerFromRightEdgeSwipeGesture-01.png" %}
 
