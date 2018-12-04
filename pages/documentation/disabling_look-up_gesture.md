@@ -5,7 +5,6 @@ tags: [macos]
 keywords: [macos]
 sidebar: documentation_sidebar
 permalink: disabling_look-up_gesture.html
-folder: documentation
 last_updated:
 ---
 

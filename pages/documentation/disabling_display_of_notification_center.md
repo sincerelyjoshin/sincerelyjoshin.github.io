@@ -5,7 +5,6 @@ tags: [macos]
 keywords: [macos]
 sidebar: documentation_sidebar
 permalink: disabling_display_of_notification_center.html
-folder: documentation
 last_updated:
 ---
 
@@ -49,7 +48,7 @@ The `TrackpadTwoFingerFromRightEdgeSwipeGesture` key in the `com.apple.driver.Ap
 </plist>
 ```
 
-## Disabling Locally With Terminal
+## Disabling Locally with Terminal
 
 Running the following commands locally in _Terminal_, while logged into the targeted user account will disable the _Notification Center_ trackpad gesture upon next login.
 
@@ -65,7 +64,7 @@ Running the following commands locally in _Terminal_, while logged into the targ
 Desired changes will not take effect until next user session
 " %}
 
-## Disabling Remotely With Script
+## Disabling Remotely with Script
 
 If you have the ability to deploy a script to your clients remotely, you will want to take advantage of the following script. It calls the Python Objective-C bridge, [_PyObjC_](https://pythonhosted.org/pyobjc/), to set the ```TrackpadTwoFingerFromRightEdgeSwipeGesture``` key to the integer value `0` in both preference domains. The script will run the commands as whomever occupies the current user session regardless of whether your management system executes as _Root_. Just as the local method using _Terminal_, this will disable the _Notification Center_ trackpad gesture upon next login.
 ```py
@@ -97,7 +96,7 @@ exit()
 Desired changes will not take effect until next user session
 " %}
 
-## Disable Trackpad Preference Pane From System Preferences
+## Disable Trackpad Preference Pane from System Preferences
 
 To ensure that users do not tamper with the trackpad gesture settings you will want to disable the _Trackpad_ preference pane in _System Preferences_ by deploying a configuration profile. In order to disable the _Trackpad_ preference pane from _System Preferences_, exclude `com.apple.preference.trackpad` from the `EnabledPreferencePanes` array in a configuration profile assigned the `com.apple.systempreferences` payload type.  
 It is also within best interest to include the `HiddenPreferencePanes` key as an empty array to prevent a bug that would render your managed preference pane payload useless.
