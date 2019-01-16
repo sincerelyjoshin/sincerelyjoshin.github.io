@@ -32,3 +32,8 @@ entries:
       url: /disabling_display_of_notification_center.html
       output: web, pdf
       type: homepage
+
+    - title: Disabling Text-to-Speech Keyboard Shortcut
+      url: /disabling_text-to-speech_keyboard_shortcut.html
+      output: web, pdf
+      type: homepage
